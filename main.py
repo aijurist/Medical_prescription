@@ -29,15 +29,13 @@ pairs = [
         "Can you describe the pain in more detail?"
     ]),
 
-    (
-        "(.*)(throbbing|pulsating|one-sided|both sides|eye pain|nausea|vomiting|sensitivity to light|sound|nasal congestion|watery eyes|pain in my (eye|eyes))",
+    ("(.*)(throbbing|pulsating|one-sided|both sides|eye pain|nausea|vomiting|sensitivity to light|sound|nasal congestion|watery eyes|pain in my (eye|eyes))",
         [
             "I see. Based on the symptoms you've mentioned, it could be a migraine.",
             "Migraine headaches often involve throbbing pain, nausea, vomiting, and sensitivity to light and sound.",
             "Can you provide more information about your symptoms?"
         ]),
 
-    # Questions to narrow down migraine
     (
     "(.*)(throb|pulsat|hammer|pound|intense|severe|one-sided|eye pain|nausea|vomit|sensitiv|light|sound|nasal congestion|watery eyes)",
     [
@@ -148,6 +146,7 @@ ext = [
         "What other symptoms are you experiencing along with feeling tired?"
     ]),
 ]
+
 pairs += fever_pairs
 pairs += ext
 chatbot = Chat(pairs)
